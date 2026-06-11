@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apibel | Miele Italiano di Invorio</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <style>
+        /* === VARIABILI COLORI === */
+        :root {
+            --bg-parchment: #E6DDC4;
+            --bg-light: #F4EEDD;
+            --text-dark-green: #1B2E1C;
+            --border-green: #2C3E2D;
+            --accent-gold: #D4AF37;
+            /* Tocco dorato per il miele */
+        }
+
+        /* === RESET & BASE === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-parchment);
+            color: var(--text-dark-green);
+            font-family: 'Playfair Display', serif;
+            line-height: 1.6;
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-green);
+            display: inline-block;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        .cursive {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        /* === NAVBAR === */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(230, 221, 196, 0.95);
+            border-bottom: 2px solid var(--border-green);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo {
+            font-size: 2.5rem;
+            text-decoration: none;
+            color: var(--text-dark-green);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Menu Hamburger per Mobile */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* === STRUTTURA SEZIONI === */
+        section {
+            padding: 100px 5% 60px;
+            /* Padding top ampio per la navbar fissa */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-center {
+            text-align: center;
+        }
+
+        /* Box in stile etichetta */
+        .label-box {
+            border: 2px solid var(--border-green);
+            outline: 1px solid var(--border-green);
+            outline-offset: -6px;
+            padding: 40px;
+            background-color: rgba(244, 238, 221, 0.5);
+            border-radius: 5px;
+        }
+
+        /* === HERO === */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .hero-title {
+            font-size: 6rem;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        /* === BOTTONI === */
+        .btn {
+            display: inline-block;
+            background-color: var(--text-dark-green);
+            color: var(--bg-parchment);
+            border: 2px solid var(--text-dark-green);
+            padding: 15px 35px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--text-dark-green);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--text-dark-green);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-dark-green);
+            color: var(--bg-parchment);
+        }
+
+        /* === GRIGLIE (Mieli, Perché Noi, Recensioni) === */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            border: 1px solid var(--border-green);
+            padding: 30px;
+            text-align: center;
+            background-color: var(--bg-light);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        /* === CONTATTI & FOOTER === */
+        #contatti {
+            background-color: var(--border-green);
+            color: var(--bg-parchment);
+            padding: 80px 5%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #contatti h2 {
+            border-color: var(--bg-parchment);
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .recycling-info {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            border-top: 1px solid rgba(230, 221, 196, 0.3);
+            padding-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-parchment);
+                border-bottom: 2px solid var(--border-green);
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero-title {
+                font-size: 4rem;
+            }
+
+            section {
+                padding-top: 120px;
+            }
+
+            .recycling-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        {
+            
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#hero" class="nav-logo cursive">Apibel</a>
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#chi-siamo">Chi Siamo</a></li>
+            <li><a href="#mieli">I Mieli</a></li>
+            <li><a href="#territorio">Il Territorio</a></li>
+            <li><a href="#metodo">Produzione</a></li>
+            <li><a href="#dove-acquistare">Acquista</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero"
+        style="background: url('landing_page.jpg') no-repeat center center; background-size: cover; max-width: 100%;">
+        <div class="label-box">
+            <div style="font-size: 2.5rem; margin-bottom: 10px;">🇮🇹</div>
+            <h1 class="hero-title cursive">Apibel</h1>
+            <div class="hero-subtitle">Miele Italiano d'Eccellenza</div>
+            <p style="font-size: 1.2rem; font-style: italic; margin-bottom: 30px;">Prodotto in quel di Invorio</p>
+            <a href="#mieli" class="btn">Scopri i nostri mieli</a>
+        </div>
+    </section>
+
+    <section id="chi-siamo" class="section-center">
+        <h2>Chi Siamo</h2>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            Apibel nasce dalla passione di Alessandro Teruggi per l'apicoltura e per la natura.
+            Siamo una piccola realtà artigianale situata a Invorio, che si dedica con dedizione e
+            rispetto alla cura delle api. Il nostro obiettivo è portare sulla tua tavola un prodotto
+            sincero, naturale e che rifletta l'autenticità del lavoro fatto a mano.
+        </p>
+    </section>
+
+    <section id="mieli">
+        <div class="section-center">
+            <h2>I Nostri Mieli</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card label-box"
+            style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('fiori_accacia.jpg') no-repeat center center; background-size: cover;">
+                <h3 class="cursive" style="font-size: 2.5rem;">Acacia</h3>
+                <p><strong>1000 g</strong></p>
+                <p style="margin: 15px 0;">Cristallino, dal sapore delicato e floreale. Ideale per dolcificare senza
+                    alterare i sapori.</p>
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Richiedi</a>
+            </div>
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('fiori_castagno.jpg') no-repeat center center; background-size: cover;">
+                <h3 class="cursive" style="font-size: 2.5rem;">Castagno</h3>
+                <p><strong>500 g / 1000 g</strong></p>
+                <p style="margin: 15px 0;">Colore ambrato scuro, sapore deciso con un leggero retrogusto amarognolo.
+                    Perfetto con i formaggi.</p>
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Richiedi</a>
+            </div>
+            <div class="card label-box">
+                <h3 class="cursive" style="font-size: 2.5rem;">Millefiori</h3>
+                <p><strong>500 g / 1000 g</strong></p>
+                <p style="margin: 15px 0;">L'essenza delle nostre colline in un vasetto. Ricco, aromatico e sempre unico
+                    ad ogni raccolto.</p>
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Richiedi</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="territorio" class="section-center">
+        <h2>Il Territorio</h2>
+        <h3 class="cursive" style="font-size: 2rem; margin-bottom: 20px;">L'Alto Novarese</h3>
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            Le nostre api bottinano nei boschi e nei prati incontaminati attorno a Invorio,
+            la "Porta del Vergante". Un territorio ricco di biodiversità, protetto dai venti e
+            baciato dal sole piemontese, che dona ai nostri mieli profumi e aromi inconfondibili.
+        </p>
+    </section>
+
+    <section id="metodo">
+        <div class="label-box" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="text-align: left; border: none; margin-bottom: 10px;">Metodo di Produzione</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    Estraiamo il nostro miele a freddo, mediante centrifugazione, per mantenerne intatte
+                    tutte le proprietà nutrizionali ed enzimatiche. Non subisce alcun trattamento termico
+                    di pastorizzazione: ciò che assaggi è esattamente ciò che le api hanno creato.
+                </p>
+                <ul style="list-style: none;">
+                    <li>✓ Estrazione a freddo</li>
+                    <li>✓ Non pastorizzato</li>
+                    <li>✓ Rispetto del benessere animale</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="perche-noi">
+        <div class="section-center">
+            <h2>Perché Scegliere Apibel</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon">🇮🇹</div>
+                <h3>100% Italiano</h3>
+                <p>Garantiamo la provenienza locale del nostro miele, raccolto e confezionato esclusivamente in Italia.
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👐</div>
+                <h3>Artigianale</h3>
+                <p>Ogni vasetto è curato a mano, dalla smielatura all'etichettatura, con la massima attenzione ai
+                    dettagli.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌿</div>
+                <h3>Puro & Naturale</h3>
+                <p>Nessuna aggiunta di zuccheri artificiali o sciroppi. Solo la dolcezza naturale del nettare dei fiori.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dove-acquistare" class="section-center">
+        <h2>Dove Acquistare</h2>
+        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;">
+            Puoi acquistare i prodotti Apibel contattandoci direttamente per il ritiro in sede a Invorio,
+            oppure trovarci nelle migliori botteghe gastronomiche del territorio.
+        </p>
+        <a href="#contatti" class="btn btn-outline">Prenota il tuo ritiro</a>
+    </section>
+
+    <section id="recensioni">
+        <div class="section-center">
+            <h2>Dicono di Noi</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card" style="font-style: italic;">
+                <p>"Il miele di acacia più delicato che abbia mai provato. Perfetto per il tè del pomeriggio."</p>
+                <h4 style="margin-top: 15px; font-style: normal;">- Marco Rossi</h4>
+            </div>
+            <div class="card" style="font-style: italic;">
+                <p>"Si sente tutto l'amore per il territorio. Il castagno ha un sapore incredibile abbinato ai formaggi
+                    locali."</p>
+                <h4 style="margin-top: 15px; font-style: normal;">- Giulia Bianchi</h4>
+            </div>
+            <div class="card" style="font-style: italic;">
+                <p>"Un prodotto genuino, si vede la cura fin dall'etichetta. Consigliatissimo!"</p>
+                <h4 style="margin-top: 15px; font-style: normal;">- Elena Verdi</h4>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contatti">
+        <h2 style="color: var(--bg-parchment);">Porta la Natura in Tavola</h2>
+        <p style="margin-bottom: 40px; font-size: 1.2rem;">Contattaci per ordini, informazioni o per venire a trovarci.
+        </p>
+
+        <div class="contact-info">
+            <h3 class="cursive" style="font-size: 2.5rem; margin-bottom: 10px;">Apibel</h3>
+            <p>di Alessandro Teruggi</p>
+            <p>📍 Via Monte Rosa 118b, 28045 Invorio (NO)</p>
+            <p>✉️ info@apibel.it </p>
+            <p>📞 +39 333 1234567 </p>
+            <p style="margin-top: 20px; font-size: 1rem;">Partita IVA: 02845140033</p>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="mailto:info@apibel.it" class="btn"
+                style="background-color: var(--bg-parchment); color: var(--text-dark-green); border-color: var(--bg-parchment);">Ordina
+                Ora</a>
+        </div>
+
+        <div class="recycling-info">
+            <div>VASO: GL 70 (VETRO)</div>
+            <div>CAPSULA: FE 40 (ACCIAIO)</div>
+            <div>♻️ VERIFICA LE DISPOSIZIONI DEL TUO COMUNE</div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Chiude il menu mobile quando si clicca un link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
