@@ -225,6 +225,10 @@
             font-size: 0.9rem;
         }
 
+        .descrizione-miele-card {
+            font-weight: 700;
+        }
+
         /* === RESPONSIVE === */
         @media (max-width: 768px) {
             .nav-links {
