@@ -81,12 +81,33 @@
 
     <section id="chi-siamo" class="section-center">
         <h2>Über uns</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-            Apibel entstand aus Alessandro Teruggis Leidenschaft für die Imkerei und die Natur.
-            Wir sind ein kleiner handwerklicher Betrieb in Invorio und widmen uns mit großer Sorgfalt und
-            Respekt der Pflege unserer Bienen. Unser Ziel ist es, Ihnen ein Produkt auf den Tisch zu bringen,
-            das ehrlich, natürlich und Ausdruck echter Handarbeit ist.
-        </p>
+
+        <div class="about-wrapper">
+
+            <div class="about-image">
+                <img src="./static/assets/apicoltore-apibel.jpg" alt="Alessandro Teruggi bei der Arbeit mit den Bienen">
+
+                <div class="about-caption">
+                    Leidenschaft, Heimatverbundenheit und Respekt für die Bienen
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h3 class="cursive">Eine echte Leidenschaft</h3>
+
+                <p>
+                    Apibel entstand aus Alessandro Teruggis Leidenschaft für die Imkerei und die Natur.
+                    Wir sind ein kleiner handwerklicher Betrieb in Invorio und widmen uns mit Sorgfalt
+                    und Respekt der Pflege unserer Bienen.
+                </p>
+
+                <p>
+                    Unser Ziel ist es, Ihnen ein ehrliches und natürliches Produkt anzubieten,
+                    das die Authentizität echter Handarbeit widerspiegelt.
+                </p>
+            </div>
+
+        </div>
     </section>
 
     <section id="mieli">
@@ -107,7 +128,8 @@
                 style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('fiori_castagno.jpg') no-repeat center center; background-size: cover;">
                 <h3 class="cursive" style="font-size: 2.5rem;">Kastanie</h3>
                 <p><strong>500 g / 1000 g</strong></p>
-                <p class="descrizione-miele-card" style="margin: 15px 0;">Dunkel bernsteinfarben, mit kräftigem Geschmack und einem
+                <p class="descrizione-miele-card" style="margin: 15px 0;">Dunkel bernsteinfarben, mit kräftigem
+                    Geschmack und einem
                     leicht herben Nachgeschmack.
                     Perfekt zu Käse.</p>
                 <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Anfragen</a>
@@ -133,7 +155,8 @@
                 style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('tiglio.png') no-repeat center center; background-size: cover;">
                 <h3 class="cursive" style="font-size: 2.5rem;">Linde</h3>
                 <p><strong>500 g / 1000 g</strong></p>
-                <p class="descrizione-miele-card" style="margin: 15px 0;">Intensiver und duftender Geschmack mit frischen und
+                <p class="descrizione-miele-card" style="margin: 15px 0;">Intensiver und duftender Geschmack mit
+                    frischen und
                     leicht zitrusartigen Noten</p>
                 <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Anfragen</a>
             </div>
@@ -143,13 +166,43 @@
     <section id="territorio" class="section-center">
         <h2>Die Region</h2>
         <h3 class="cursive" style="font-size: 2rem; margin-bottom: 20px;">Das nördliche Novarese</h3>
+
         <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-            "Unsere Bienen sammeln Nektar in den unberührten Wäldern und Wiesen rund um Invorio, dem „Tor zum Vergante“,
-            in Fontaneto d'Agogna, dem „grünen Herzen der Ebene von Novara“, und in Moncrestese, einem „alten Dorf, umgeben von
-            Wäldern“.
-            Eine Landschaft voller Biodiversität, geschützt vor den Winden und verwöhnt von der piemontesischen Sonne, die unseren
-            Honigen unverwechselbare Düfte und Aromen verleiht."
+            Unsere Bienen sammeln Nektar in den unberührten Wäldern und Wiesen rund um Invorio,
+            dem „Tor zum Vergante“, in Fontaneto d'Agogna,
+            dem „grünen Herzen der Ebene von Novara“, und in Montecrestese,
+            einem „alten Dorf, umgeben von Wäldern“.
+            Eine Landschaft voller Biodiversität, geschützt vor den Winden und verwöhnt von der piemontesischen Sonne,
+            die unseren Honigen unverwechselbare Düfte und Aromen verleiht.
         </p>
+
+        <div class="territorio-gallery">
+
+            <div class="territorio-card">
+                <img src="./static/assets/invorio.jpg" alt="Panorama von Invorio">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Invorio</h3>
+                    <p>Das Tor zum Vergante</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/fontaneto-web.jpg" alt="Fontaneto d'Agogna">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Fontaneto d'Agogna</h3>
+                    <p>Das grüne Herz der Ebene von Novara</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/montecrestese.jpg" alt="Montecrestese">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Montecrestese</h3>
+                    <p>Ein altes Dorf, umgeben von Wäldern</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="metodo">
@@ -176,15 +229,18 @@
         </div>
         <div class="grid-3">
             <div class="card">
-                <div class="card-icon"><img src="./static/assets/it.svg" alt="Italiano" class="flag-icon" style="height: 2.4rem; width: 3.2rem;"></div>
+                <div class="card-icon"><img src="./static/assets/it.svg" alt="Italiano" class="flag-icon"
+                        style="height: 2.4rem; width: 3.2rem;"></div>
                 <h3>100 % Italienisch</h3>
-                <p>Wir garantieren die lokale Herkunft unseres Honigs, der ausschließlich in Italien geerntet und abgefüllt wird.
+                <p>Wir garantieren die lokale Herkunft unseres Honigs, der ausschließlich in Italien geerntet und
+                    abgefüllt wird.
                 </p>
             </div>
             <div class="card">
                 <div class="card-icon">👐</div>
                 <h3>Handwerklich hergestellt</h3>
-                <p>Jedes Glas wird von Hand verarbeitet, von der Honiggewinnung bis zur Etikettierung, mit größter Sorgfalt bis ins
+                <p>Jedes Glas wird von Hand verarbeitet, von der Honiggewinnung bis zur Etikettierung, mit größter
+                    Sorgfalt bis ins
                     Detail.</p>
             </div>
             <div class="card">
@@ -221,7 +277,8 @@
                 <h4 style="margin-top: 15px; font-style: normal;">- Giulia Bianchi</h4>
             </div>
             <div class="card" style="font-style: italic;">
-                <p>"Ein ehrliches, authentisches Produkt – die Sorgfalt erkennt man schon am Etikett. Absolut empfehlenswert!"</p>
+                <p>"Ein ehrliches, authentisches Produkt – die Sorgfalt erkennt man schon am Etikett. Absolut
+                    empfehlenswert!"</p>
                 <h4 style="margin-top: 15px; font-style: normal;">- Elena Verdi</h4>
             </div>
         </div>
@@ -229,7 +286,8 @@
 
     <footer id="contatti">
         <h2 style="color: var(--bg-parchment);">Bringen Sie die Natur auf Ihren Tisch</h2>
-        <p style="margin-bottom: 40px; font-size: 1.2rem;">Kontaktieren Sie uns für Bestellungen, Informationen oder einen Besuch bei uns.
+        <p style="margin-bottom: 40px; font-size: 1.2rem;">Kontaktieren Sie uns für Bestellungen, Informationen oder
+            einen Besuch bei uns.
         </p>
 
         <div class="contact-info">

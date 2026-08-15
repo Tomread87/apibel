@@ -81,12 +81,33 @@
 
     <section id="chi-siamo" class="section-center">
         <h2>À propos</h2>
-        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-            Apibel est né de la passion d’Alessandro Teruggi pour l’apiculture et la nature.
-            Nous sommes une petite entreprise artisanale située à Invorio, qui se consacre avec soin et
-            respect au bien-être de nos abeilles. Notre objectif est de vous proposer un produit
-            authentique, naturel et fidèle à la valeur du travail artisanal.
-        </p>
+
+        <div class="about-wrapper">
+
+            <div class="about-image">
+                <img src="./static/assets/apicoltore-apibel.jpg" alt="Alessandro Teruggi travaillant avec les abeilles">
+
+                <div class="about-caption">
+                    Passion, terroir et respect des abeilles
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h3 class="cursive">Une passion authentique</h3>
+
+                <p>
+                    Apibel est né de la passion d’Alessandro Teruggi pour l’apiculture et la nature.
+                    Nous sommes une petite entreprise artisanale située à Invorio, dédiée au soin de nos abeilles
+                    avec attention et respect.
+                </p>
+
+                <p>
+                    Notre objectif est de vous proposer un produit authentique et naturel,
+                    qui reflète toute la valeur d’un travail artisanal.
+                </p>
+            </div>
+
+        </div>
     </section>
 
     <section id="mieli">
@@ -107,7 +128,8 @@
                 style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('fiori_castagno.jpg') no-repeat center center; background-size: cover;">
                 <h3 class="cursive" style="font-size: 2.5rem;">Châtaignier</h3>
                 <p><strong>500 g / 1000 g</strong></p>
-                <p class="descrizione-miele-card" style="margin: 15px 0;">De couleur ambrée foncée, au goût intense avec un
+                <p class="descrizione-miele-card" style="margin: 15px 0;">De couleur ambrée foncée, au goût intense avec
+                    un
                     léger arrière-goût amer.
                     Parfait avec les fromages.</p>
                 <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Demander</a>
@@ -125,7 +147,8 @@
                 style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('castiglio.png') no-repeat center center; background-size: cover;">
                 <h3 class="cursive" style="font-size: 2.5rem;">Castiglio</h3>
                 <p><strong>500 g / 1000 g</strong></p>
-                <p class="descrizione-miele-card" style="margin: 15px 0;">Une rencontre entre châtaignier et tilleul, aux notes
+                <p class="descrizione-miele-card" style="margin: 15px 0;">Une rencontre entre châtaignier et tilleul,
+                    aux notes
                     florales, légèrement amères et persistantes</p>
                 <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Demander</a>
             </div>
@@ -133,7 +156,8 @@
                 style="background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('tiglio.png') no-repeat center center; background-size: cover;">
                 <h3 class="cursive" style="font-size: 2.5rem;">Tilleul</h3>
                 <p><strong>500 g / 1000 g</strong></p>
-                <p class="descrizione-miele-card" style="margin: 15px 0;">Un goût intense et parfumé, avec des notes fraîches et
+                <p class="descrizione-miele-card" style="margin: 15px 0;">Un goût intense et parfumé, avec des notes
+                    fraîches et
                     légèrement citronnées</p>
                 <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">Demander</a>
             </div>
@@ -143,13 +167,43 @@
     <section id="territorio" class="section-center">
         <h2>Le territoire</h2>
         <h3 class="cursive" style="font-size: 2rem; margin-bottom: 20px;">Le Haut-Novarese</h3>
+
         <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
-            "Nos abeilles butinent dans les bois et les prairies préservées autour d’Invorio, la « Porte du Vergante »,
-            à Fontaneto d’Agogna, le « cœur vert de la plaine de Novare », et à Moncrestese, un « ancien village entouré de
-            forêts ».
-            Un territoire riche en biodiversité, protégé des vents et baigné par le soleil du Piémont, qui donne à nos
-            miels des parfums et des arômes incomparables."
+            Nos abeilles butinent dans les bois et les prairies préservées autour d’Invorio,
+            la « Porte du Vergante », à Fontaneto d'Agogna,
+            le « cœur vert de la plaine de Novare », et à Montecrestese,
+            un « ancien village entouré de forêts ».
+            Un territoire riche en biodiversité, protégé des vents et baigné par le soleil du Piémont,
+            qui donne à nos miels des parfums et des arômes incomparables.
         </p>
+
+        <div class="territorio-gallery">
+
+            <div class="territorio-card">
+                <img src="./static/assets/invorio.jpg" alt="Vue d'Invorio">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Invorio</h3>
+                    <p>La Porte du Vergante</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/fontaneto-web.jpg" alt="Fontaneto d'Agogna">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Fontaneto d'Agogna</h3>
+                    <p>Le cœur vert de la plaine de Novare</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/montecrestese.jpg" alt="Montecrestese">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Montecrestese</h3>
+                    <p>Un ancien village entouré de forêts</p>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="metodo">
@@ -176,7 +230,8 @@
         </div>
         <div class="grid-3">
             <div class="card">
-                <div class="card-icon"><img src="./static/assets/it.svg" alt="Italiano" class="flag-icon" style="height: 2.4rem; width: 3.2rem;"></div>
+                <div class="card-icon"><img src="./static/assets/it.svg" alt="Italiano" class="flag-icon"
+                        style="height: 2.4rem; width: 3.2rem;"></div>
                 <h3>100 % italien</h3>
                 <p>Nous garantissons l’origine locale de notre miel, récolté et conditionné exclusivement en Italie.
                 </p>
@@ -184,7 +239,8 @@
             <div class="card">
                 <div class="card-icon">👐</div>
                 <h3>Artisanal</h3>
-                <p>Chaque pot est préparé à la main, de l’extraction du miel à l’étiquetage, avec la plus grande attention aux
+                <p>Chaque pot est préparé à la main, de l’extraction du miel à l’étiquetage, avec la plus grande
+                    attention aux
                     détails.</p>
             </div>
             <div class="card">
@@ -229,7 +285,8 @@
 
     <footer id="contatti">
         <h2 style="color: var(--bg-parchment);">Apportez la nature à votre table</h2>
-        <p style="margin-bottom: 40px; font-size: 1.2rem;">Contactez-nous pour vos commandes, pour toute information ou pour venir nous rendre visite.
+        <p style="margin-bottom: 40px; font-size: 1.2rem;">Contactez-nous pour vos commandes, pour toute information ou
+            pour venir nous rendre visite.
         </p>
 
         <div class="contact-info">
