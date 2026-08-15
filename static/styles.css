@@ -75,7 +75,8 @@
             gap: 20px;
         }
 
-        .nav-links a {
+        .nav-links a,
+        .language-selector select {
             text-decoration: none;
             color: var(--text-dark-green);
             font-weight: 600;
@@ -87,6 +88,93 @@
 
         .nav-links a:hover {
             color: var(--accent-gold);
+        }
+
+        .language-selector {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-button {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            border: none;
+            background: transparent;
+
+            color: var(--text-dark-green);
+            font-family: inherit;
+            font-size: inherit;
+
+            cursor: pointer;
+        }
+
+        .language-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .flag-icon {
+            width: 20px;
+            height: 14px;
+            object-fit: cover;
+        }
+
+        .language-arrow {
+            font-size: 0.75rem;
+            margin-left: 2px;
+        }
+
+        .language-menu {
+            display: none;
+
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+
+            min-width: 155px;
+
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            border-radius: 6px;
+
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+            overflow: hidden;
+            z-index: 1000;
+        }
+
+        .language-menu.show {
+            display: block;
+        }
+
+        .language-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 14px;
+
+            color: var(--text-dark-green);
+            text-decoration: none;
+
+            white-space: nowrap;
+        }
+
+        .language-menu a img {
+            width: 20px;
+            height: 14px;
+            object-fit: cover;
+        }
+
+        .language-menu a:hover {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .language-menu a.active {
+            font-weight: 600;
         }
 
         /* Menu Hamburger per Mobile */

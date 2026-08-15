@@ -11,3 +11,21 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+function changeLanguage(url) {
+    if (url) {
+        window.location.href = url;
+    }
+}
+
+const languageButton = document.getElementById("language-button");
+const languageMenu = document.getElementById("language-menu");
+
+languageButton.addEventListener("click", function (event) {
+    event.stopPropagation();
+    languageMenu.classList.toggle("show");
+});
+
+document.addEventListener("click", function () {
+    languageMenu.classList.remove("show");
+});
