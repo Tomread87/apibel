@@ -168,6 +168,17 @@ window.initApibelReviews = async function () {
 
         const reviews = place.reviews || [];
 
+        const carousel = document.querySelector(
+            "#recensioni .reviews-carousel"
+        );
+
+        // Use a centered summary layout when Google
+        // does not return individual reviews.
+        carousel?.classList.toggle(
+            "has-summary",
+            reviews.length === 0
+        );
+
         if (reviews.length === 0) {
             const card = document.createElement("div");
             card.className = "card review-card";

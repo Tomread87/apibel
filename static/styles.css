@@ -692,3 +692,154 @@
         height: 30px;
     }
 }
+
+
+/* =========================================
+   API​​BEL - GOOGLE REVIEWS CAROUSEL
+   ========================================= */
+
+#recensioni .reviews-carousel {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Review cards container */
+#recensioni .reviews-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    min-width: 0;
+}
+
+#recensioni .reviews-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual cards */
+#recensioni .review-card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 0;
+    box-sizing: border-box;
+    scroll-snap-align: start;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+
+    padding: 30px;
+    background: #f7f0df;
+    border: 1px solid #b9a98a;
+    border-radius: 8px;
+}
+
+/* Stars */
+#recensioni .review-stars {
+    font-size: 24px;
+    color: #c98a10;
+    letter-spacing: 3px;
+}
+
+/* Links */
+#recensioni .review-card a {
+    color: #183b25;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* Navigation buttons */
+#recensioni .reviews-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #c98a10;
+    border-radius: 50%;
+
+    background: #183b25;
+    color: #ffffff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+#recensioni .reviews-arrow:hover {
+    background: #c98a10;
+}
+
+/* Google attribution */
+#recensioni .reviews-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 25px auto;
+    text-align: center;
+    color: #183b25;
+}
+
+#recensioni .reviews-footer img {
+    width: 65px;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Single rating summary */
+#recensioni .reviews-carousel.has-summary {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+#recensioni .reviews-carousel.has-summary .reviews-arrow {
+    display: none;
+}
+
+#recensioni .reviews-carousel.has-summary .reviews-track {
+    justify-content: center;
+}
+
+#recensioni .reviews-carousel.has-summary .review-card {
+    flex: 0 1 650px;
+    width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    #recensioni .review-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #recensioni .reviews-carousel {
+        grid-template-columns: 32px minmax(0, 1fr) 32px;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    #recensioni .review-card {
+        flex-basis: 100%;
+        padding: 20px;
+    }
+
+    #recensioni .reviews-arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 16px;
+    }
+}
