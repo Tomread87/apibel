@@ -9,7 +9,7 @@
     <!-- SEO -->
     <title>Apibel | Miele Italiano di Invorio</title>
     <meta name="description"
-          content="Scopri Apibel, miele artigianale italiano di eccellenza. Mieli naturali prodotti con passione nel territorio piemontese.">
+        content="Scopri Apibel, miele artigianale italiano di eccellenza. Mieli naturali prodotti con passione nel territorio piemontese.">
 
     <link rel="canonical" href="https://apibel.it/">
 
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="Apibel">
     <meta property="og:title" content="Apibel | Miele Italiano d'Eccellenza">
     <meta property="og:description"
-          content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani, frutto della passione per le api e il territorio.">
+        content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani, frutto della passione per le api e il territorio.">
     <meta property="og:url" content="https://apibel.it/">
     <meta property="og:locale" content="it_IT">
 
@@ -33,8 +33,7 @@
     <!-- TWITTER / X CARD -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Apibel | Miele Italiano d'Eccellenza">
-    <meta name="twitter:description"
-          content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani.">
+    <meta name="twitter:description" content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani.">
     <meta name="twitter:image" content="https://apibel.it/favicon_ico/whatsapp-preview.png">
 
     <!-- FAVICONS -->
@@ -309,26 +308,37 @@
         <a href="#contatti" class="btn btn-outline">Book Your Collection</a>
     </section>
 
+
     <section id="recensioni">
         <div class="section-center">
-            <h2>What People Say About Us</h2>
+            <h2>What Our Customers Say</h2>
         </div>
-        <div class="grid-3">
-            <div class="card" style="font-style: italic;">
-                <p>"The most delicate acacia honey I have ever tried. Perfect with afternoon tea."</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Marco Rossi</h4>
+
+        <div class="reviews-carousel">
+            <button class="reviews-arrow" id="reviews-prev" aria-label="Previous reviews">
+                &#10094;
+            </button>
+
+            <div class="reviews-track" id="google-reviews">
+                <p>Loading reviews...</p>
             </div>
-            <div class="card" style="font-style: italic;">
-                <p>"You can taste the love for the land. The chestnut honey is incredible paired with local
-                    cheeses."</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Giulia Bianchi</h4>
-            </div>
-            <div class="card" style="font-style: italic;">
-                <p>"A genuine product, with care evident from the label onwards. Highly recommended!"</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Elena Verdi</h4>
-            </div>
+
+            <button class="reviews-arrow" id="reviews-next" aria-label="Next reviews">
+                &#10095;
+            </button>
+        </div>
+
+        <div class="reviews-footer">
+            <span>Reviews on</span>
+            <a id="reviews-google-link" href="https://www.google.com/maps/search/?api=1&query=Apibel%20Invorio"
+                target="_blank" rel="noopener noreferrer">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png"
+                    alt="Google">
+            </a>
+            <div id="reviews-attributions"></div>
         </div>
     </section>
+
 
     <footer id="contatti">
         <h2 style="color: var(--bg-parchment);">Bring Nature to Your Table</h2>
