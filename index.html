@@ -9,7 +9,7 @@
     <!-- SEO -->
     <title>Apibel | Miele Italiano di Invorio</title>
     <meta name="description"
-          content="Scopri Apibel, miele artigianale italiano di eccellenza. Mieli naturali prodotti con passione nel territorio piemontese.">
+        content="Scopri Apibel, miele artigianale italiano di eccellenza. Mieli naturali prodotti con passione nel territorio piemontese.">
 
     <link rel="canonical" href="https://apibel.it/">
 
@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="Apibel">
     <meta property="og:title" content="Apibel | Miele Italiano d'Eccellenza">
     <meta property="og:description"
-          content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani, frutto della passione per le api e il territorio.">
+        content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani, frutto della passione per le api e il territorio.">
     <meta property="og:url" content="https://apibel.it/">
     <meta property="og:locale" content="it_IT">
 
@@ -33,8 +33,7 @@
     <!-- TWITTER / X CARD -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Apibel | Miele Italiano d'Eccellenza">
-    <meta name="twitter:description"
-          content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani.">
+    <meta name="twitter:description" content="Porta la natura in tavola. Scopri i nostri mieli artigianali italiani.">
     <meta name="twitter:image" content="https://apibel.it/favicon_ico/whatsapp-preview.png">
 
     <!-- FAVICONS -->
@@ -308,26 +307,37 @@
         <a href="#contatti" class="btn btn-outline">Prenota il tuo ritiro</a>
     </section>
 
+
     <section id="recensioni">
         <div class="section-center">
             <h2>Dicono di Noi</h2>
         </div>
-        <div class="grid-3">
-            <div class="card" style="font-style: italic;">
-                <p>"Il miele di acacia più delicato che abbia mai provato. Perfetto per il tè del pomeriggio."</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Marco Rossi</h4>
+
+        <div class="reviews-carousel">
+            <button class="reviews-arrow" id="reviews-prev" aria-label="Recensioni precedenti">
+                &#10094;
+            </button>
+
+            <div class="reviews-track" id="google-reviews">
+                <p>Caricamento recensioni...</p>
             </div>
-            <div class="card" style="font-style: italic;">
-                <p>"Si sente tutto l'amore per il territorio. Il castagno ha un sapore incredibile abbinato ai formaggi
-                    locali."</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Giulia Bianchi</h4>
-            </div>
-            <div class="card" style="font-style: italic;">
-                <p>"Un prodotto genuino, si vede la cura fin dall'etichetta. Consigliatissimo!"</p>
-                <h4 style="margin-top: 15px; font-style: normal;">- Elena Verdi</h4>
-            </div>
+
+            <button class="reviews-arrow" id="reviews-next" aria-label="Recensioni successive">
+                &#10095;
+            </button>
+        </div>
+
+        <div class="reviews-footer">
+            <span>Recensioni da</span>
+            <a id="reviews-google-link" href="https://www.google.com/maps/search/?api=1&query=Apibel%20Invorio"
+                target="_blank" rel="noopener noreferrer">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png"
+                    alt="Google">
+            </a>
+            <div id="reviews-attributions"></div>
         </div>
     </section>
+
 
     <footer id="contatti">
         <h2 style="color: var(--bg-parchment);">Porta la Natura in Tavola</h2>
@@ -367,8 +377,13 @@
             <div>♻️ VERIFICA LE DISPOSIZIONI DEL TUO COMUNE</div>
         </div-->
     </footer>
-
+    <script src="./static/google-reviews.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvJmmdhHDPuYm4RtPzXrY-00W-8nqBkts&v=weekly&loading=async&callback=initApibelReviews"
+        async defer>
+        </script>
     <script src="./static/scripts.js"></script>
+
 </body>
 
 </html>

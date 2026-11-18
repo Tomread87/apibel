@@ -569,3 +569,126 @@
                 gap: 15px;
             }
         }
+
+
+
+/* AP​​IBEL - Google Reviews Carousel */
+
+.reviews-carousel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.reviews-track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 40px) / 3);
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    flex: 1;
+    padding-top: 25px;
+    justify-content: center;
+}
+
+.reviews-track::-webkit-scrollbar {
+    display: none;
+}
+
+.review-card {
+    scroll-snap-align: start;
+    min-width: 0;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.review-stars {
+    color: #c58b28;
+    font-size: 21px;
+    letter-spacing: 2px;
+    font-style: normal;
+}
+
+.review-text {
+    flex: 1;
+    line-height: 1.7;
+}
+
+.review-author {
+    font-style: normal;
+    font-weight: 600;
+    color: #29452f;
+}
+
+.review-author a,
+.review-source a {
+    color: inherit;
+}
+
+.review-source {
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+.reviews-arrow {
+    background: transparent;
+    border: 1px solid #c58b28;
+    color: #29452f;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-size: 20px;
+    transition: 0.2s;
+}
+
+.reviews-arrow:hover {
+    background: #c58b28;
+    color: white;
+}
+
+.reviews-footer {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.reviews-footer img {
+    width: 65px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#reviews-attributions {
+    margin-top: 8px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+    .reviews-track {
+        grid-auto-columns: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 600px) {
+    .reviews-track {
+        grid-auto-columns: 100%;
+    }
+
+    .reviews-carousel {
+        gap: 8px;
+    }
+
+    .reviews-arrow {
+        width: 30px;
+        height: 30px;
+    }
+}
