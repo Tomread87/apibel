@@ -45,7 +45,7 @@ def main():
         except (ValueError, KeyError, TypeError):
             print("Existing snapshot is invalid or expired")
 
-    key = os.environ.get("AIzaSyCvJmmdhHDPuYm4RtPzXrY-00W-8nqBkts")
+    key = os.environ.get("GOOGLE_PLACES_API_KEY")
     if not key:
         print("Missing GOOGLE_PLACES_API_KEY repository secret", file=sys.stderr)
         return 1
