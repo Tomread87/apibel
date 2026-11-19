@@ -625,12 +625,6 @@ section {
     font-style: italic;
 }
 
-#recensioni .review-author {
-    color: #29452f;
-    font-style: normal;
-    font-weight: 600;
-}
-
 #recensioni .review-source {
     font-size: 0.8rem;
     font-style: normal;
@@ -685,6 +679,41 @@ section {
     margin-top: 8px;
     font-size: 0.8rem;
 }
+
+
+/* Google Review Author */
+
+.review-author {
+    color: #29452f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--text-dark-green);
+}
+
+.review-author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.review-author-photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-gold);
+}
+
+.review-author-info:hover {
+    color: #c58b28;
+}
+
 
 /* Una sola card: mostra il riepilogo quando Google non restituisce recensioni. */
 #recensioni .reviews-carousel.has-summary {
