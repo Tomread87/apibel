@@ -590,6 +590,7 @@ section {
     scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
+    padding-top: 5px;
 }
 
 #recensioni .reviews-track::-webkit-scrollbar {
