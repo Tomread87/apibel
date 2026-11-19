@@ -697,6 +697,7 @@ section {
 
 #recensioni .reviews-carousel.has-summary .reviews-track {
     justify-content: center;
+    padding-top: 5px;
 }
 
 #recensioni .reviews-carousel.has-summary .review-card {
