@@ -1,0 +1,44 @@
+name: Refresh Apibel reviews snapshot
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Daily check; the Python script makes an API call only if 96h has elapsed.
+    - cron: '0 6 * * *'
+
+# NOTE: Disabled until an authorized source and storage rights are confirmed.
+# Google Places API policies generally prohibit caching/redistributing reviews.
+permissions:
+  contents: write
+
+concurrency:
+  group: apibel-reviews-snapshot
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: ${{ vars.ENABLE_GOOGLE_REVIEW_CACHE == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh snapshot if at least 96 hours old
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+        run: python scripts/refresh_google_reviews.py
+      - name: Commit changed snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A static/data/google-reviews.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh Apibel review snapshot"
+            git push
+          else
+            echo "No snapshot changes"
+          fi
