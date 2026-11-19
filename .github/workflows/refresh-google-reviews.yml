@@ -17,7 +17,7 @@ concurrency:
 
 jobs:
   refresh:
-    if: ${{ vars.ENABLE_GOOGLE_REVIEW_CACHE == 'false' }}
+    if: ${{ vars.ENABLE_GOOGLE_REVIEW_CACHE == 'true' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -42,39 +42,3 @@ jobs:
           else
             echo "No snapshot changes"
           fi
-
-
-  test_snapshot:
-    if: github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Create test JSON
-        run: |
-          mkdir -p static/data
-
-          python - <<'PY'
-          import json
-          from datetime import datetime, timezone
-
-          data = {
-              "test": True,
-              "placeId": "ChIJWVfiXABzhkcRh_osv744VoU",
-              "generatedAt": datetime.now(timezone.utc).isoformat(),
-              "reviews": []
-          }
-
-          with open("static/data/test-snapshot.json", "w") as f:
-              json.dump(data, f, indent=2)
-          PY
-
-      - name: Commit test JSON
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git add static/data/test-snapshot.json
-          git commit -m "test: generate snapshot JSON"
-          git push
