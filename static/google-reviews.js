@@ -21,32 +21,22 @@ function moveReviews(direction) {
 
 
 
-window.initApibelReviews = async function () {
+const initApibelReviews = async function () {
+    
     try {
         // Load Google Places library
-        const { Place } =
-            await google.maps.importLibrary("places");
+        /*const { Place } =
+            await google.maps.importLibrary("places");*/
 
         // Apibel's Google Place ID
-        const place = new Place({
+        /*const place = new Place({
             id: "ChIJWVfiXABzhkcRh_osv744VoU"
-        });
-
-        // Request Google reviews and business details
-        await place.fetchFields({
-            fields: [
-                "displayName",
-                "rating",
-                "userRatingCount",
-                "reviews",
-                "googleMapsURI"
-            ]
-        });
-
-        console.log("Business:", place.displayName);
-        console.log("Average rating:", place.rating);
-        console.log("Total ratings:", place.userRatingCount);
-        console.log("Google reviews:", place.reviews);
+        });*/
+        
+        const response = await fetch("/static/data/google-reviews.json");
+        const place = response.ok ? await response.json() : {};
+        
+        console.log("Google Reviews data:", place);
 
         // Display reviews
         const container = document.getElementById("google-reviews");
@@ -219,3 +209,4 @@ window.initApibelReviews = async function () {
     }
 };
 
+initApibelReviews();
