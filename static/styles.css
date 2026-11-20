@@ -621,9 +621,11 @@ section {
 }
 
 #recensioni .review-text {
-    flex: 1;
-    line-height: 1.7;
-    font-style: italic;
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #c98a10 #eee2c9;
 }
 
 #recensioni .review-source {
