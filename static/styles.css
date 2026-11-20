@@ -762,3 +762,26 @@ section {
         font-size: 16px;
     }
 }
+
+
+/* Honey jar images */
+#mieli .honey-jar-image {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+
+    filter: drop-shadow(0 8px 8px rgba(40, 30, 10, 0.15));
+    transition: transform 0.3s ease;
+}
+
+#mieli .card:hover .honey-jar-image {
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    #mieli .honey-jar-image {
+        height: 200px;
+    }
+}
