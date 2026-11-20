@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Optional scheduled Google Places snapshot, disabled by default.
+"""Create four-language Apibel Places snapshots, when storage rights permit.
 
-IMPORTANT: Google Places API generally prohibits caching/rehosting review content.
-Use only after confirming you have sufficient rights to store and redistribute
-this data. The repository variable ENABLE_GOOGLE_REVIEW_CACHE gates its use.
+WARNING: Google's standard Places API terms generally prohibit caching,
+rehosting, and redistributing review content. Keep the GitHub Actions
+ENABLE_GOOGLE_REVIEW_CACHE gate disabled unless authorized to store it.
+
+The Google API key is read only from the GOOGLE_PLACES_API_KEY environment
+variable (GitHub Actions repository secret); never commit an actual key.
 """
 
 import datetime as dt
@@ -12,12 +15,15 @@ import os
 from pathlib import Path
 import sys
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
 PLACE_ID = "ChIJWVfiXABzhkcRh_osv744VoU"
+LANGUAGES = ("it", "en", "de", "fr")
 FILE = Path("static/data/google-reviews.json")
-TTL = dt.timedelta(hours=1)
+TTL = dt.timedelta(hours=1)  # Preserve the current one-hour testing interval.
 UTC = dt.timezone.utc
+FIELD_MASK = "id,rating,userRatingCount,reviews,googleMapsUri,attributions"
 
 
 def utc_now():
@@ -32,78 +38,112 @@ def parse_iso(time):
     return dt.datetime.fromisoformat(time.replace("Z", "+00:00"))
 
 
+def localized_text(value):
+    if isinstance(value, dict):
+        return value.get("text") or "", value.get("languageCode")
+    return value if isinstance(value, str) else "", None
+
+
+def normalized_review(review):
+    localized, localized_lang = localized_text(review.get("text"))
+    original, original_lang = localized_text(review.get("originalText"))
+    author = review.get("authorAttribution") or {}
+    actual_text = localized or original
+
+    return {
+        "rating": review.get("rating"),
+        "text": actual_text,
+        "textLanguageCode": localized_lang or original_lang,
+        "originalText": original,
+        "originalLanguageCode": original_lang,
+        "translated": bool(localized and original and localized != original),
+        "googleMapsURI": review.get("googleMapsUri"),
+        "authorAttribution": {
+            "displayName": author.get("displayName"),
+            "uri": author.get("uri"),
+            "photoURI": author.get("photoUri"),
+        },
+    }
+
+
+def fetch_place(key, language):
+    query = urlencode({"languageCode": language})
+    request = Request(
+        f"https://places.googleapis.com/v1/places/{PLACE_ID}?{query}",
+        headers={
+            "X-Goog-Api-Key": key,
+            "X-Goog-FieldMask": FIELD_MASK,
+            "Accept": "application/json",
+        },
+    )
+    with urlopen(request, timeout=20) as response:
+        return json.load(response)
+
+
 def main():
     now = utc_now()
-    existing = None
+
     if FILE.exists():
         try:
-            existing = json.loads(FILE.read_text(encoding="utf-8"))
-            expiry = parse_iso(existing["expiresAt"])
-            if now < expiry:
-                print(f"Current snapshot valid until {iso(expiry)}; no request needed")
+            previous = json.loads(FILE.read_text(encoding="utf-8"))
+            expiry = parse_iso(previous["expiresAt"])
+            # Old single-language snapshots are intentionally refreshed.
+            languages = previous.get("languages") or {}
+            if now < expiry and all(
+                isinstance(languages.get(lang), dict) for lang in LANGUAGES
+            ):
+                print(f"Four-language snapshot valid until {iso(expiry)}; no request needed")
                 return 0
-        except (ValueError, KeyError, TypeError):
-            print("Existing snapshot is invalid or expired")
+        except (ValueError, KeyError, TypeError) as exc:
+            print(f"Snapshot invalid; will refresh ({type(exc).__name__})")
 
     key = os.environ.get("GOOGLE_PLACES_API_KEY")
     if not key:
         print("Missing GOOGLE_PLACES_API_KEY repository secret", file=sys.stderr)
         return 1
 
-    req = Request(
-        f"https://places.googleapis.com/v1/places/{PLACE_ID}",
-        headers={
-            "X-Goog-Api-Key": key,
-            "X-Goog-FieldMask": "id,displayName,rating,userRatingCount,reviews,googleMapsUri,attributions",
-            "Accept": "application/json",
-        },
-    )
+    localized_places = {}
     try:
-        with urlopen(req, timeout=20) as response:
-            place = json.load(response)
-    except (HTTPError, URLError, TimeoutError) as exc:
-        # Don't retain stale material if the refresh fails.
-        if FILE.exists():
-            FILE.unlink()
-        print(f"::warning::Places refresh failed ({type(exc).__name__}); removed any expired snapshot")
-        return 0
+        for lang in LANGUAGES:
+            place = fetch_place(key, lang)
+            reviews = [normalized_review(r) for r in (place.get("reviews") or [])]
+            localized_places[lang] = {
+                "rating": place.get("rating"),
+                "userRatingCount": place.get("userRatingCount"),
+                "googleMapsURI": place.get("googleMapsUri"),
+                "attributions": place.get("attributions") or [],
+                "reviews": reviews,
+            }
+            print(f"{lang}: Google returned {len(reviews)} review(s)")
+    except (HTTPError, URLError, TimeoutError, ValueError) as exc:
+        # Never publish partially refreshed translations or delete last good data.
+        print(f"::error::Google Places request failed ({type(exc).__name__})", file=sys.stderr)
+        return 1
 
-    reviews = place.get("reviews") or []
-    if not reviews:
-        # Google sometimes returns no review objects. Do not publish an empty
-        # snapshot or continue serving an expired one.
-        if FILE.exists():
-            FILE.unlink()
-        print("No review objects returned. Removed stale snapshot (if any).")
-        return 0
+    if not any(localized_places[lang]["reviews"] for lang in LANGUAGES):
+        print("::error::All four languages returned zero reviews. Previous snapshot unchanged.", file=sys.stderr)
+        return 1
 
-    # For a separately authorized source, retain supplied author attributions.
+    italian = localized_places["it"]
     snapshot = {
         "source": "Google Places API (New)",
-        "placeId": place.get("id", PLACE_ID),
+        "placeId": PLACE_ID,
         "fetchedAt": iso(now),
         "expiresAt": iso(now + TTL),
-        "rating": place.get("rating"),
-        "userRatingCount": place.get("userRatingCount"),
-        "googleMapsURI": place.get("googleMapsUri"),
-        "attributions": place.get("attributions") or [],
-        "reviews": [
-            {
-                "rating": r.get("rating"),
-                "text": r.get("text", {}).get("text", "") if isinstance(r.get("text"), dict) else r.get("text", ""),
-                "googleMapsURI": r.get("googleMapsUri"),
-                "authorAttribution": {
-                    "displayName": (r.get("authorAttribution") or {}).get("displayName"),
-                    "uri": (r.get("authorAttribution") or {}).get("uri"),
-                    "photoURI": (r.get("authorAttribution") or {}).get("photoUri"),
-                },
-            }
-            for r in reviews
-        ],
+        # Keep the original top-level format for existing consumers.
+        "rating": italian["rating"],
+        "userRatingCount": italian["userRatingCount"],
+        "googleMapsURI": italian["googleMapsURI"],
+        "attributions": italian["attributions"],
+        "reviews": italian["reviews"],
+        "languages": localized_places,
     }
+
     FILE.parent.mkdir(parents=True, exist_ok=True)
-    FILE.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"Snapshot written with {len(reviews)} reviews, expires {snapshot['expiresAt']}")
+    temp_file = FILE.with_suffix(".json.tmp")
+    temp_file.write_text(json.dumps(snapshot, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    temp_file.replace(FILE)
+    print(f"Four-language snapshot written; expires {snapshot['expiresAt']}")
     return 0
 
 
