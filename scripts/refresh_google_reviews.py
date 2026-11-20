@@ -16,7 +16,7 @@ from urllib.request import Request, urlopen
 
 PLACE_ID = "ChIJWVfiXABzhkcRh_osv744VoU"
 FILE = Path("static/data/google-reviews.json")
-TTL = dt.timedelta(hours=23)
+TTL = dt.timedelta(hours=1)
 UTC = dt.timezone.utc
 
 
