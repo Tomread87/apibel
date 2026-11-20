@@ -626,6 +626,7 @@ section {
     overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #c98a10 #eee2c9;
+    flex: 1;
 }
 
 #recensioni .review-source {

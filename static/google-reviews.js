@@ -6,10 +6,10 @@
     const PLACE_URL = "https://maps.app.goo.gl/JiFdwPf9znurrA3i6";
     const DATA_URL = "/static/data/google-reviews.json";
     const supportedLanguages = ["it", "en", "de", "fr"];
-    const detectedLanguage = (document.documentElement.lang || "it")
-        .toLowerCase().split("-")[0];
-    const language = supportedLanguages.includes(detectedLanguage)
-        ? detectedLanguage : "it";
+    const detectedLanguage = (document.documentElement.lang || "it").toLowerCase().split("-")[0];
+    const language = supportedLanguages.includes(detectedLanguage) ? detectedLanguage : "it";
+
+    console.log(language, detectedLanguage, supportedLanguages);
 
     const labels = {
         it: {
