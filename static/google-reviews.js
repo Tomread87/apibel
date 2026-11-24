@@ -62,16 +62,138 @@
         return link;
     }
 
+
     function moveReviews(direction) {
         const track = document.getElementById("google-reviews");
         const card = track?.querySelector(".review-card");
         if (!track || !card) return;
+
         const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
-        track.scrollBy({
-            left: direction * (card.getBoundingClientRect().width + gap),
+        const step = card.getBoundingClientRect().width + gap;
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+
+        const atEnd = track.scrollLeft >= maxScroll - 4;
+        const atStart = track.scrollLeft <= 4;
+
+        const destination = direction > 0
+            ? (atEnd ? 0 : Math.min(track.scrollLeft + step, maxScroll))
+            : (atStart ? maxScroll : Math.max(track.scrollLeft - step, 0));
+
+        track.scrollTo({
+            left: destination,
             behavior: "smooth"
         });
     }
+
+    function setupReviewNavigation(reviewCount) {
+        const prev = document.getElementById("reviews-prev");
+        const next = document.getElementById("reviews-next");
+        const track = document.getElementById("google-reviews");
+        const carousel = document.querySelector("#recensioni .reviews-carousel");
+
+        if (!prev || !next || !track || !carousel) return;
+
+        let resetTimer = () => { };
+
+        prev.addEventListener("click", () => {
+            moveReviews(-1);
+            resetTimer();
+        });
+
+        next.addEventListener("click", () => {
+            moveReviews(1);
+            resetTimer();
+        });
+
+        // Autoplay only when there are more than 3 reviews.
+        // Respect reduced-motion preferences.
+        if (
+            reviewCount <= 3 ||
+            window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ) {
+            return;
+        }
+
+        next.classList.add("has-auto-timer");
+
+        const DURATION = 5000; // 5 seconds
+
+        let elapsed = 0;
+        let lastTimestamp = null;
+        let frameId = 0;
+        let visible = true;
+
+        // Pause when the carousel is outside the viewport.
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(([entry]) => {
+                visible = entry.isIntersecting;
+                lastTimestamp = null;
+            }, {
+                threshold: 0.25
+            });
+
+            observer.observe(carousel);
+        }
+
+        document.addEventListener("visibilitychange", () => {
+            lastTimestamp = null;
+        });
+
+        function tick(timestamp) {
+            if (lastTimestamp === null) {
+                lastTimestamp = timestamp;
+            }
+
+            // Pause while a visitor interacts with the reviews.
+            const paused =
+                document.hidden ||
+                !visible ||
+                track.matches(":hover") ||
+                prev.matches(":hover") ||
+                next.matches(":hover") ||
+                !!track.querySelector(":focus-visible") ||
+                prev.matches(":focus-visible") ||
+                next.matches(":focus-visible");
+
+
+            if (!paused) {
+                elapsed += Math.max(0, timestamp - lastTimestamp);
+            }
+
+            lastTimestamp = timestamp;
+
+            const progress = Math.min(
+                100,
+                (elapsed / DURATION) * 100
+            );
+
+            // Clockwise fill from green to gold.
+            next.style.setProperty(
+                "--timer-progress",
+                `${progress}%`
+            );
+
+            if (elapsed >= DURATION + 160 && !paused) {
+                next.click();
+                return;
+            }
+
+            frameId = window.requestAnimationFrame(tick);
+        }
+
+        resetTimer = () => {
+            if (frameId) cancelAnimationFrame(frameId);
+            elapsed = 0;
+            lastTimestamp = null;
+
+            next.style.setProperty("--timer-progress", "0%");
+
+            frameId = window.requestAnimationFrame(tick);
+        };
+
+        resetTimer();
+    }
+
 
     function renderSummary(container, place) {
         const card = document.createElement("div");
@@ -182,9 +304,6 @@
         const container = document.getElementById("google-reviews");
         if (!container) return;
 
-        document.getElementById("reviews-prev")?.addEventListener("click", () => moveReviews(-1));
-        document.getElementById("reviews-next")?.addEventListener("click", () => moveReviews(1));
-
         try {
             const response = await fetch(DATA_URL, { cache: "no-cache" });
             if (!response.ok) throw new Error(`Reviews JSON HTTP ${response.status}`);
@@ -210,6 +329,8 @@
             }
 
             renderAttributions(place);
+
+            setupReviewNavigation(reviews.length);
 
             // Give keyboard focus only to review text boxes that actually scroll.
             requestAnimationFrame(() => {
