@@ -1,10 +1,10 @@
 {
   "source": "Google Places API (New)",
   "placeId": "ChIJWVfiXABzhkcRh_osv744VoU",
-  "fetchedAt": "2026-11-22T13:57:03Z",
-  "expiresAt": "2026-11-22T14:57:03Z",
+  "fetchedAt": "2026-11-23T17:12:45Z",
+  "expiresAt": "2026-11-23T18:12:45Z",
   "rating": 5,
-  "userRatingCount": 6,
+  "userRatingCount": 5,
   "googleMapsURI": "https://maps.google.com/?cid=9607929246943869575&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
   "attributions": [],
   "reviews": [
@@ -38,20 +38,6 @@
     },
     {
       "rating": 5,
-      "text": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-      "textLanguageCode": "it",
-      "originalText": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-      "originalLanguageCode": "it",
-      "translated": false,
-      "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dk1taFNXVkpYYW5oNFVtRlRTMkl3TlZWWGNWRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
-      "authorAttribution": {
-        "displayName": "Alexandra Pirola",
-        "uri": "https://www.google.com/maps/contrib/115587469680206792009/reviews",
-        "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjXZFOBJ4ucROHyvza-THjIjBQ6LwmFovjoUHfSBJMFWE_NnCeFENg=s128-c0x00000000-cc-rp-mo-ba3"
-      }
-    },
-    {
-      "rating": 5,
       "text": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
       "textLanguageCode": "it",
       "originalText": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
@@ -77,12 +63,26 @@
         "uri": "https://www.google.com/maps/contrib/108198974732073821237/reviews",
         "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocIpMa3QmPlvhHPGh6qV3Icg8ZSMgZACDohA0a4D1bq7KxnELw=s128-c0x00000000-cc-rp-mo"
       }
+    },
+    {
+      "rating": 5,
+      "text": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+      "textLanguageCode": "en",
+      "originalText": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+      "originalLanguageCode": "en",
+      "translated": false,
+      "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20wMWFtdDNiMDVqTm1oRlNVNW9ZV2hTUmpNM1lsRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
+      "authorAttribution": {
+        "displayName": "Tal Harris",
+        "uri": "https://www.google.com/maps/contrib/105185644319582809323/reviews",
+        "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjUAuLrJGu6N6zqZHCNuCYOJEM9NSPwhk1AusXAjhATSibxaQNAS=s128-c0x00000000-cc-rp-mo-ba3"
+      }
     }
   ],
   "languages": {
     "it": {
       "rating": 5,
-      "userRatingCount": 6,
+      "userRatingCount": 5,
       "googleMapsURI": "https://maps.google.com/?cid=9607929246943869575&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
       "attributions": [],
       "reviews": [
@@ -116,20 +116,6 @@
         },
         {
           "rating": 5,
-          "text": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "textLanguageCode": "it",
-          "originalText": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "originalLanguageCode": "it",
-          "translated": false,
-          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dk1taFNXVkpYYW5oNFVtRlRTMkl3TlZWWGNWRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
-          "authorAttribution": {
-            "displayName": "Alexandra Pirola",
-            "uri": "https://www.google.com/maps/contrib/115587469680206792009/reviews",
-            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjXZFOBJ4ucROHyvza-THjIjBQ6LwmFovjoUHfSBJMFWE_NnCeFENg=s128-c0x00000000-cc-rp-mo-ba3"
-          }
-        },
-        {
-          "rating": 5,
           "text": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
           "textLanguageCode": "it",
           "originalText": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
@@ -155,12 +141,26 @@
             "uri": "https://www.google.com/maps/contrib/108198974732073821237/reviews",
             "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocIpMa3QmPlvhHPGh6qV3Icg8ZSMgZACDohA0a4D1bq7KxnELw=s128-c0x00000000-cc-rp-mo"
           }
+        },
+        {
+          "rating": 5,
+          "text": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+          "textLanguageCode": "en",
+          "originalText": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+          "originalLanguageCode": "en",
+          "translated": false,
+          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20wMWFtdDNiMDVqTm1oRlNVNW9ZV2hTUmpNM1lsRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
+          "authorAttribution": {
+            "displayName": "Tal Harris",
+            "uri": "https://www.google.com/maps/contrib/105185644319582809323/reviews",
+            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjUAuLrJGu6N6zqZHCNuCYOJEM9NSPwhk1AusXAjhATSibxaQNAS=s128-c0x00000000-cc-rp-mo-ba3"
+          }
         }
       ]
     },
     "en": {
       "rating": 5,
-      "userRatingCount": 6,
+      "userRatingCount": 5,
       "googleMapsURI": "https://maps.google.com/?cid=9607929246943869575&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
       "attributions": [],
       "reviews": [
@@ -208,20 +208,6 @@
         },
         {
           "rating": 5,
-          "text": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "textLanguageCode": "it",
-          "originalText": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "originalLanguageCode": "it",
-          "translated": false,
-          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dk1taFNXVkpYYW5oNFVtRlRTMkl3TlZWWGNWRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
-          "authorAttribution": {
-            "displayName": "Alexandra Pirola",
-            "uri": "https://www.google.com/maps/contrib/115587469680206792009/reviews",
-            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjXZFOBJ4ucROHyvza-THjIjBQ6LwmFovjoUHfSBJMFWE_NnCeFENg=s128-c0x00000000-cc-rp-mo-ba3"
-          }
-        },
-        {
-          "rating": 5,
           "text": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
           "textLanguageCode": "it",
           "originalText": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
@@ -233,12 +219,26 @@
             "uri": "https://www.google.com/maps/contrib/100355670169513740548/reviews",
             "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocJGNq23K5mKDbmE3KnIug0vr7tAoGFQdCcrSO9Cu5KTnwYRjQ=s128-c0x00000000-cc-rp-mo"
           }
+        },
+        {
+          "rating": 5,
+          "text": "Delicious honey, sweet and smooth on the palate. Also excellent with cheeses.",
+          "textLanguageCode": "en",
+          "originalText": "Miele buonissimo, dolce e morbido al palato. Ottimo anche con i formaggi 🌸",
+          "originalLanguageCode": "it",
+          "translated": true,
+          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT21GQlZFTXRTVnBPTW5aVlUyTkdSREZUVUVoclRVRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
+          "authorAttribution": {
+            "displayName": "Antonella Ravani",
+            "uri": "https://www.google.com/maps/contrib/108198974732073821237/reviews",
+            "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocIpMa3QmPlvhHPGh6qV3Icg8ZSMgZACDohA0a4D1bq7KxnELw=s128-c0x00000000-cc-rp-mo"
+          }
         }
       ]
     },
     "de": {
       "rating": 5,
-      "userRatingCount": 6,
+      "userRatingCount": 5,
       "googleMapsURI": "https://maps.google.com/?cid=9607929246943869575&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
       "attributions": [],
       "reviews": [
@@ -272,20 +272,6 @@
         },
         {
           "rating": 5,
-          "text": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "textLanguageCode": "it",
-          "originalText": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "originalLanguageCode": "it",
-          "translated": false,
-          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dk1taFNXVkpYYW5oNFVtRlRTMkl3TlZWWGNWRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
-          "authorAttribution": {
-            "displayName": "Alexandra Pirola",
-            "uri": "https://www.google.com/maps/contrib/115587469680206792009/reviews",
-            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjXZFOBJ4ucROHyvza-THjIjBQ6LwmFovjoUHfSBJMFWE_NnCeFENg=s128-c0x00000000-cc-rp-mo-ba3"
-          }
-        },
-        {
-          "rating": 5,
           "text": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
           "textLanguageCode": "it",
           "originalText": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
@@ -311,12 +297,26 @@
             "uri": "https://www.google.com/maps/contrib/108198974732073821237/reviews",
             "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocIpMa3QmPlvhHPGh6qV3Icg8ZSMgZACDohA0a4D1bq7KxnELw=s128-c0x00000000-cc-rp-mo"
           }
+        },
+        {
+          "rating": 5,
+          "text": "Das ist womöglich der beste Honig, den ich je probiert habe. Außerdem ist er bienenfreundlich. Absolut empfehlenswert!",
+          "textLanguageCode": "de",
+          "originalText": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+          "originalLanguageCode": "en",
+          "translated": true,
+          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20wMWFtdDNiMDVqTm1oRlNVNW9ZV2hTUmpNM1lsRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
+          "authorAttribution": {
+            "displayName": "Tal Harris",
+            "uri": "https://www.google.com/maps/contrib/105185644319582809323/reviews",
+            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjUAuLrJGu6N6zqZHCNuCYOJEM9NSPwhk1AusXAjhATSibxaQNAS=s128-c0x00000000-cc-rp-mo-ba3"
+          }
         }
       ]
     },
     "fr": {
       "rating": 5,
-      "userRatingCount": 6,
+      "userRatingCount": 5,
       "googleMapsURI": "https://maps.google.com/?cid=9607929246943869575&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
       "attributions": [],
       "reviews": [
@@ -350,20 +350,6 @@
         },
         {
           "rating": 5,
-          "text": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "textLanguageCode": "it",
-          "originalText": "Ottimo miele, sia sua una fetta di pane che come accompagnamento a del formaggio o dolcificante in una torta!",
-          "originalLanguageCode": "it",
-          "translated": false,
-          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT2t4dk1taFNXVkpYYW5oNFVtRlRTMkl3TlZWWGNWRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
-          "authorAttribution": {
-            "displayName": "Alexandra Pirola",
-            "uri": "https://www.google.com/maps/contrib/115587469680206792009/reviews",
-            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjXZFOBJ4ucROHyvza-THjIjBQ6LwmFovjoUHfSBJMFWE_NnCeFENg=s128-c0x00000000-cc-rp-mo-ba3"
-          }
-        },
-        {
-          "rating": 5,
           "text": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
           "textLanguageCode": "it",
           "originalText": "Prodotto eccellente....il Castiglio da urlo!!! Continuate così! Bravi",
@@ -388,6 +374,20 @@
             "displayName": "Antonella Ravani",
             "uri": "https://www.google.com/maps/contrib/108198974732073821237/reviews",
             "photoURI": "https://lh3.googleusercontent.com/a/ACg8ocIpMa3QmPlvhHPGh6qV3Icg8ZSMgZACDohA0a4D1bq7KxnELw=s128-c0x00000000-cc-rp-mo"
+          }
+        },
+        {
+          "rating": 5,
+          "text": "C'est sans doute le meilleur miel que j'aie jamais goûté. De plus, il est respectueux des abeilles. Je le recommande vivement !",
+          "textLanguageCode": "fr",
+          "originalText": "This is possibly the best honey I have ever tasted. In addition, it is also bee friendly. Highly recommend!",
+          "originalLanguageCode": "en",
+          "translated": true,
+          "googleMapsURI": "https://www.google.com/maps/reviews/data=!4m6!14m5!1m4!2m3!1sCi9DQUlRQUNvZENodHljRjlvT20wMWFtdDNiMDVqTm1oRlNVNW9ZV2hTUmpNM1lsRRAB!2m1!1s0x478673005ce25759:0x855638bebf2cfa87",
+          "authorAttribution": {
+            "displayName": "Tal Harris",
+            "uri": "https://www.google.com/maps/contrib/105185644319582809323/reviews",
+            "photoURI": "https://lh3.googleusercontent.com/a-/ALV-UjUAuLrJGu6N6zqZHCNuCYOJEM9NSPwhk1AusXAjhATSibxaQNAS=s128-c0x00000000-cc-rp-mo-ba3"
           }
         }
       ]
