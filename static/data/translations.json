@@ -1,0 +1,380 @@
+{
+  "seo.title": {
+    "it": "Apibel | Miele Italiano di Invorio",
+    "en": "Apibel | Italian Honey from Invorio",
+    "fr": "Apibel | Miel Italien d'Invorio",
+    "de": "Apibel | Italienischer Honig aus Invorio"
+  },
+  "nav.about": {
+    "it": "Chi Siamo",
+    "en": "About Us",
+    "fr": "À propos",
+    "de": "Über uns"
+  },
+  "nav.honey": {
+    "it": "I Mieli",
+    "en": "Our Honey",
+    "fr": "Nos miels",
+    "de": "Unsere Honige"
+  },
+  "nav.territory": {
+    "it": "Il Territorio",
+    "en": "The Territory",
+    "fr": "Le territoire",
+    "de": "Die Region"
+  },
+  "nav.production": {
+    "it": "Produzione",
+    "en": "Production",
+    "fr": "Production",
+    "de": "Herstellung"
+  },
+  "nav.buy": {
+    "it": "Acquista",
+    "en": "Buy",
+    "fr": "Acheter",
+    "de": "Kaufen"
+  },
+  "nav.contact": {
+    "it": "Contatti",
+    "en": "Contact",
+    "fr": "Contact",
+    "de": "Kontakt"
+  },
+  "nav.current_language": {
+    "it": "Italiano",
+    "en": "English",
+    "fr": "Français",
+    "de": "Deutsch"
+  },
+  "hero.headline": {
+    "it": "Miele Italiano d'Eccellenza",
+    "en": "Premium Italian Honey",
+    "fr": "Miel italien d’excellence",
+    "de": "Italienischer Honig von höchster Qualität"
+  },
+  "hero.origin": {
+    "it": "Prodotto in quel di Invorio",
+    "en": "Produced in Invorio",
+    "fr": "Produit à Invorio",
+    "de": "Hergestellt in Invorio"
+  },
+  "hero.cta": {
+    "it": "Scopri i nostri mieli",
+    "en": "Discover our honey",
+    "fr": "Découvrez nos miels",
+    "de": "Entdecken Sie unsere Honige"
+  },
+  "about.eyebrow": {
+    "it": "Passione, territorio e rispetto per le api",
+    "en": "Passion, local heritage and respect for the bees",
+    "fr": "Passion, terroir et respect des abeilles",
+    "de": "Leidenschaft, Heimatverbundenheit und Respekt für die Bienen"
+  },
+  "about.subtitle": {
+    "it": "Una passione autentica",
+    "en": "Genuine Passion",
+    "fr": "Une passion authentique",
+    "de": "Eine echte Leidenschaft"
+  },
+  "about.paragraph1": {
+    "it": "Apibel nasce dalla passione di Alessandro Teruggi per l'apicoltura e per la natura. Siamo una piccola realtà artigianale situata a Invorio, che si dedica con dedizione e rispetto alla cura delle api.",
+    "en": "Apibel was born from Alessandro Teruggi's passion for beekeeping and nature. We are a small artisan business based in Invorio, dedicated to caring for our bees with commitment and respect.",
+    "fr": "Apibel est né de la passion d’Alessandro Teruggi pour l’apiculture et la nature. Nous sommes une petite entreprise artisanale située à Invorio, dédiée au soin de nos abeilles avec attention et respect.",
+    "de": "Apibel entstand aus Alessandro Teruggis Leidenschaft für die Imkerei und die Natur. Wir sind ein kleiner handwerklicher Betrieb in Invorio und widmen uns mit Sorgfalt und Respekt der Pflege unserer Bienen."
+  },
+  "about.paragraph2": {
+    "it": "Il nostro obiettivo è portare sulla tua tavola un prodotto sincero, naturale e che rifletta l'autenticità del lavoro fatto a mano.",
+    "en": "Our goal is to bring to your table an honest, natural product that reflects the authenticity of handcrafted work.",
+    "fr": "Notre objectif est de vous proposer un produit authentique et naturel, qui reflète toute la valeur d’un travail artisanal.",
+    "de": "Unser Ziel ist es, Ihnen ein ehrliches und natürliches Produkt anzubieten, das die Authentizität echter Handarbeit widerspiegelt."
+  },
+  "honey.heading": {
+    "it": "I Nostri Mieli",
+    "en": "Our Honey",
+    "fr": "Nos miels",
+    "de": "Unsere Honige"
+  },
+  "honey.acacia.description": {
+    "it": "Cristallino, dal sapore delicato e floreale. Ideale per dolcificare senza alterare i sapori.",
+    "en": "Clear, with a delicate floral flavour. Ideal for sweetening without altering other flavours.",
+    "fr": "Clair, au goût délicat et floral. Idéal pour sucrer sans altérer les saveurs.",
+    "de": "Klar, mit einem feinen und blumigen Geschmack. Ideal zum Süßen, ohne den Eigengeschmack anderer Speisen zu verändern."
+  },
+  "honey.request": {
+    "it": "Richiedi",
+    "en": "Enquire",
+    "fr": "Demander",
+    "de": "Anfragen"
+  },
+  "honey.chestnut.name": {
+    "it": "Castagno",
+    "en": "Chestnut",
+    "fr": "Châtaignier",
+    "de": "Kastanie"
+  },
+  "honey.chestnut.description": {
+    "it": "Colore ambrato scuro, sapore deciso con un leggero retrogusto amarognolo. Perfetto con i formaggi.",
+    "en": "Dark amber in colour, with a bold flavour and a slightly bitter finish. Perfect with cheese.",
+    "fr": "De couleur ambrée foncée, au goût intense avec un léger arrière-goût amer. Parfait avec les fromages.",
+    "de": "Dunkel bernsteinfarben, mit kräftigem Geschmack und einem leicht herben Nachgeschmack. Perfekt zu Käse."
+  },
+  "honey.wildflower.name": {
+    "it": "Millefiori",
+    "en": "Wildflower",
+    "fr": "Toutes fleurs",
+    "de": "Blütenhonig"
+  },
+  "honey.wildflower.description": {
+    "it": "L'essenza delle nostre colline in un vasetto. Ricco, aromatico e sempre unico ad ogni raccolto.",
+    "en": "The essence of our hills in a jar. Rich, aromatic and always unique with every harvest.",
+    "fr": "L’essence de nos collines dans un pot. Riche, aromatique et toujours unique à chaque récolte.",
+    "de": "Die Essenz unserer Hügel in einem Glas. Reichhaltig, aromatisch und bei jeder Ernte einzigartig."
+  },
+  "honey.castiglio.description": {
+    "it": "Incontro di castagno e tiglio, con note floreali, leggermente amare e persistenti.",
+    "en": "A blend of chestnut and linden, with floral notes and a slightly bitter, lingering finish.",
+    "fr": "Une rencontre entre châtaignier et tilleul, aux notes florales, légèrement amères et persistantes.",
+    "de": "Eine Verbindung aus Kastanie und Linde mit blumigen, leicht herben und lang anhaltenden Noten."
+  },
+  "honey.linden.name": {
+    "it": "Tiglio",
+    "en": "Linden",
+    "fr": "Tilleul",
+    "de": "Linde"
+  },
+  "honey.linden.description": {
+    "it": "Gusto intenso e fragrante, con note fresche e leggermente agrumate.",
+    "en": "An intense, fragrant flavour, with fresh and lightly citrusy notes.",
+    "fr": "Un goût intense et parfumé, avec des notes fraîches et légèrement citronnées.",
+    "de": "Intensiver und duftender Geschmack mit frischen und leicht zitrusartigen Noten."
+  },
+  "territory.subtitle": {
+    "it": "L'Alto Novarese",
+    "en": "Northern Novara",
+    "fr": "Le Haut-Novarese",
+    "de": "Das nördliche Novarese"
+  },
+  "territory.description": {
+    "it": "Le nostre api bottinano nei boschi e nei prati incontaminati attorno a Invorio, la \"Porta del Vergante\", a Fontaneto d'Agogna, \"cuore verde della piana novarese\", e a Montecrestese, \"antico borgo avvolto dai boschi\". Un territorio ricco di biodiversità, protetto dai venti e baciato dal sole piemontese, che dona ai nostri mieli profumi e aromi inconfondibili.",
+    "en": "Our bees forage in the unspoilt woods and meadows around Invorio, the \"Gateway to Vergante\", in Fontaneto d'Agogna, the \"green heart of the Novara plain\", and in Montecrestese, an \"ancient village surrounded by woodland\". A land rich in biodiversity, sheltered from the winds and warmed by the Piedmont sun, giving our honey its distinctive aromas and flavours.",
+    "fr": "Nos abeilles butinent dans les bois et les prairies préservées autour d’Invorio, la « Porte du Vergante », à Fontaneto d'Agogna, le « cœur vert de la plaine de Novare », et à Montecrestese, un « ancien village entouré de forêts ». Un territoire riche en biodiversité, protégé des vents et baigné par le soleil du Piémont, qui donne à nos miels des parfums et des arômes incomparables.",
+    "de": "Unsere Bienen sammeln Nektar in den unberührten Wäldern und Wiesen rund um Invorio, dem „Tor zum Vergante“, in Fontaneto d'Agogna, dem „grünen Herzen der Ebene von Novara“, und in Montecrestese, einem „alten Dorf, umgeben von Wäldern“. Eine Landschaft voller Biodiversität, geschützt vor den Winden und verwöhnt von der piemontesischen Sonne, die unseren Honigen unverwechselbare Düfte und Aromen verleiht."
+  },
+  "territory.invorio.description": {
+    "it": "La Porta del Vergante",
+    "en": "The Gateway to Vergante",
+    "fr": "La Porte du Vergante",
+    "de": "Das Tor zum Vergante"
+  },
+  "territory.fontaneto.description": {
+    "it": "Il cuore verde della piana novarese",
+    "en": "The green heart of the Novara plain",
+    "fr": "Le cœur vert de la plaine de Novare",
+    "de": "Das grüne Herz der Ebene von Novara"
+  },
+  "territory.montecrestese.description": {
+    "it": "Un antico borgo tra i boschi",
+    "en": "An ancient village surrounded by woodland",
+    "fr": "Un ancien village entouré de forêts",
+    "de": "Ein altes Dorf, umgeben von Wäldern"
+  },
+  "production.heading": {
+    "it": "Metodo di Produzione",
+    "en": "Production Method",
+    "fr": "Méthode de production",
+    "de": "Herstellungsverfahren"
+  },
+  "production.description": {
+    "it": "Estraiamo il nostro miele a freddo, mediante centrifugazione, per mantenerne intatte tutte le proprietà nutrizionali ed enzimatiche. Non subisce alcun trattamento termico di pastorizzazione: ciò che assaggi è esattamente ciò che le api hanno creato.",
+    "en": "We extract our honey cold by centrifugation, preserving all of its nutritional and enzymatic properties. It undergoes no heat pasteurisation treatment: what you taste is exactly what the bees created.",
+    "fr": "Nous extrayons notre miel à froid par centrifugation afin de préserver toutes ses propriétés nutritionnelles et enzymatiques. Il ne subit aucun traitement thermique de pasteurisation : ce que vous goûtez est exactement ce que les abeilles ont créé.",
+    "de": "Wir schleudern unseren Honig kalt, um seine Nährstoffe und Enzyme vollständig zu bewahren. Er wird keiner thermischen Pasteurisierung unterzogen: Was Sie schmecken, ist genau das, was die Bienen geschaffen haben."
+  },
+  "production.feature1": {
+    "it": "✓ Estrazione a freddo",
+    "en": "✓ Cold extraction",
+    "fr": "✓ Extraction à froid",
+    "de": "✓ Kaltschleuderung"
+  },
+  "production.feature2": {
+    "it": "✓ Non pastorizzato",
+    "en": "✓ Unpasteurised",
+    "fr": "✓ Non pasteurisé",
+    "de": "✓ Nicht pasteurisiert"
+  },
+  "production.feature3": {
+    "it": "✓ Rispetto del benessere animale",
+    "en": "✓ Respect for bee welfare",
+    "fr": "✓ Respect du bien-être des abeilles",
+    "de": "✓ Respekt für das Wohlergehen der Bienen"
+  },
+  "benefits.heading": {
+    "it": "Perché Scegliere Apibel",
+    "en": "Why Choose Apibel",
+    "fr": "Pourquoi choisir Apibel",
+    "de": "Warum Apibel"
+  },
+  "benefits.italian.title": {
+    "it": "100% Italiano",
+    "en": "100% Italian",
+    "fr": "100 % italien",
+    "de": "100 % Italienisch"
+  },
+  "benefits.italian.description": {
+    "it": "Garantiamo la provenienza locale del nostro miele, raccolto e confezionato esclusivamente in Italia.",
+    "en": "We guarantee the local origin of our honey, harvested and packed exclusively in Italy.",
+    "fr": "Nous garantissons l’origine locale de notre miel, récolté et conditionné exclusivement en Italie.",
+    "de": "Wir garantieren die lokale Herkunft unseres Honigs, der ausschließlich in Italien geerntet und abgefüllt wird."
+  },
+  "benefits.artisanal.title": {
+    "it": "Artigianale",
+    "en": "Artisanal",
+    "fr": "Artisanal",
+    "de": "Handwerklich hergestellt"
+  },
+  "benefits.artisanal.description": {
+    "it": "Ogni vasetto è curato a mano, dalla smielatura all'etichettatura, con la massima attenzione ai dettagli.",
+    "en": "Every jar is handled by hand, from honey extraction to labelling, with the utmost attention to detail.",
+    "fr": "Chaque pot est préparé à la main, de l’extraction du miel à l’étiquetage, avec la plus grande attention aux détails.",
+    "de": "Jedes Glas wird von Hand verarbeitet, von der Honiggewinnung bis zur Etikettierung, mit größter Sorgfalt bis ins Detail."
+  },
+  "benefits.natural.title": {
+    "it": "Puro & Naturale",
+    "en": "Pure & Natural",
+    "fr": "Pur & Naturel",
+    "de": "Rein & Natürlich"
+  },
+  "benefits.natural.description": {
+    "it": "Nessuna aggiunta di zuccheri artificiali o sciroppi. Solo la dolcezza naturale del nettare dei fiori.",
+    "en": "No added artificial sugars or syrups. Only the natural sweetness of flower nectar.",
+    "fr": "Sans ajout de sucres artificiels ni de sirops. Seulement la douceur naturelle du nectar des fleurs.",
+    "de": "Keine zugesetzten künstlichen Zucker oder Sirupe. Nur die natürliche Süße des Blütennektars."
+  },
+  "buy.heading": {
+    "it": "Dove Acquistare",
+    "en": "Where to Buy",
+    "fr": "Où acheter",
+    "de": "Wo kaufen"
+  },
+  "buy.description": {
+    "it": "Puoi acquistare i nostri mieli contattandoci direttamente per il ritiro in sede a Invorio, oppure trovarci nelle migliori botteghe gastronomiche del territorio. Inoltre, per richieste di grandi quantità, siamo a disposizione anche per concordare la spedizione.",
+    "en": "You can purchase our honey by contacting us directly for collection from our premises in Invorio, or find us in selected local delicatessens. For larger quantity orders, we are also available to arrange shipping.",
+    "fr": "Vous pouvez acheter nos miels en nous contactant directement pour un retrait à Invorio, ou les retrouver dans une sélection d’épiceries fines de la région. Pour les commandes en grande quantité, nous pouvons également organiser une expédition sur demande.",
+    "de": "Sie können unsere Honige direkt bei uns bestellen und in Invorio abholen, oder sie in ausgewählten Feinkostgeschäften der Region finden. Für größere Bestellmengen können wir auf Anfrage auch einen Versand vereinbaren."
+  },
+  "buy.cta": {
+    "it": "Prenota il tuo ritiro",
+    "en": "Book Your Collection",
+    "fr": "Réserver votre retrait",
+    "de": "Abholung reservieren"
+  },
+  "reviews.heading": {
+    "it": "Dicono di Noi",
+    "en": "What Our Customers Say",
+    "fr": "Ce qu'ils disent de nous",
+    "de": "Das sagen unsere Kunden"
+  },
+  "reviews.loading": {
+    "it": "Caricamento recensioni...",
+    "en": "Loading reviews...",
+    "fr": "Chargement des avis...",
+    "de": "Bewertungen werden geladen..."
+  },
+  "reviews.credit": {
+    "it": "Recensioni da",
+    "en": "Reviews on",
+    "fr": "Avis sur",
+    "de": "Bewertungen auf"
+  },
+  "footer.headline": {
+    "it": "Porta la Natura in Tavola",
+    "en": "Bring Nature to Your Table",
+    "fr": "Apportez la nature à votre table",
+    "de": "Bringen Sie die Natur auf Ihren Tisch"
+  },
+  "footer.description": {
+    "it": "Contattaci per ordini, informazioni o per venire a trovarci.",
+    "en": "Contact us for orders, information, or to come and visit us.",
+    "fr": "Contactez-nous pour vos commandes, pour toute information ou pour venir nous rendre visite.",
+    "de": "Kontaktieren Sie uns für Bestellungen, Informationen oder einen Besuch bei uns."
+  },
+  "footer.byline": {
+    "it": "di Alessandro Teruggi",
+    "en": "by Alessandro Teruggi",
+    "fr": "par Alessandro Teruggi",
+    "de": "von Alessandro Teruggi"
+  },
+  "footer.vat": {
+    "it": "Partita IVA: 02845140033",
+    "en": "VAT No.: 02845140033",
+    "fr": "N° de TVA : 02845140033",
+    "de": "USt-IdNr.: 02845140033"
+  },
+  "footer.cta": {
+    "it": "Ordina Ora",
+    "en": "Order Now",
+    "fr": "Commander maintenant",
+    "de": "Jetzt bestellen"
+  },
+  "seo.description": {
+    "it": "Scopri Apibel, miele artigianale italiano di eccellenza. Mieli naturali prodotti con passione nel territorio piemontese.",
+    "en": "Discover Apibel, fine Italian artisanal honey. Natural honeys produced with passion in the Piedmont region.",
+    "fr": "Découvrez Apibel, miel artisanal italien d'excellence. Des miels naturels produits avec passion dans la région du Piémont.",
+    "de": "Entdecken Sie Apibel, feinsten italienischen Honig aus handwerklicher Herstellung. Naturbelassene Honigsorten, mit Leidenschaft im Piemont produziert."
+  },
+  "images.beekeeper": {
+    "it": "Alessandro Teruggi durante il lavoro con le api",
+    "en": "Alessandro Teruggi working with the bees",
+    "fr": "Alessandro Teruggi travaillant avec les abeilles",
+    "de": "Alessandro Teruggi bei der Arbeit mit den Bienen"
+  },
+  "images.acacia": {
+    "it": "Vasetto di miele di Acacia Apibel",
+    "en": "Apibel Acacia honey jar",
+    "fr": "Pot de miel d'acacia Apibel",
+    "de": "Apibel Akazienhonig im Glas"
+  },
+  "images.chestnut": {
+    "it": "Vasetto di miele di Castagno Apibel",
+    "en": "Apibel Chestnut honey jar",
+    "fr": "Pot de miel de châtaignier Apibel",
+    "de": "Apibel Kastanienhonig im Glas"
+  },
+  "images.wildflower": {
+    "it": "Vasetto di miele Millefiori Apibel",
+    "en": "Apibel Wildflower honey jar",
+    "fr": "Pot de miel toutes fleurs Apibel",
+    "de": "Apibel Blütenhonig im Glas"
+  },
+  "images.castiglio": {
+    "it": "Vasetto di miele Castiglio Apibel",
+    "en": "Apibel Castiglio honey jar",
+    "fr": "Pot de miel Castiglio Apibel",
+    "de": "Apibel Castiglio-Honig im Glas"
+  },
+  "images.linden": {
+    "it": "Vasetto di miele Tiglio Apibel",
+    "en": "Apibel Linden honey jar",
+    "fr": "Pot de miel de tilleul Apibel",
+    "de": "Apibel Lindenhonig im Glas"
+  },
+  "images.invorio": {
+    "it": "Panorama di Invorio",
+    "en": "View of Invorio",
+    "fr": "Vue d'Invorio",
+    "de": "Panorama von Invorio"
+  },
+  "reviews.previous": {
+    "it": "Recensioni precedenti",
+    "en": "Previous reviews",
+    "fr": "Avis précédents",
+    "de": "Vorherige Bewertungen"
+  },
+  "reviews.next": {
+    "it": "Recensioni successive",
+    "en": "Next reviews",
+    "fr": "Avis suivants",
+    "de": "Nächste Bewertungen"
+  }
+}

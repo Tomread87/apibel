@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="{{ attr:lang }}">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>{{ text:seo.title }}</title>
+    <meta name="description"
+        content="{{ attr:seo.description }}">
+
+    <link rel="canonical" href="{{ attr:canonical_url }}">
+    <link rel="alternate" hreflang="it" href="https://apibel.it/">
+    <link rel="alternate" hreflang="en" href="https://apibel.it/index-en.html">
+    <link rel="alternate" hreflang="fr" href="https://apibel.it/index-fr.html">
+    <link rel="alternate" hreflang="de" href="https://apibel.it/index-de.html">
+    <link rel="alternate" hreflang="x-default" href="https://apibel.it/">
+
+    <!-- OPEN GRAPH: WhatsApp, Facebook, LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Apibel">
+    <meta property="og:title" content="{{ attr:seo.title }}">
+    <meta property="og:description"
+        content="{{ attr:seo.description }}">
+    <meta property="og:url" content="{{ attr:canonical_url }}">
+    <meta property="og:locale" content="{{ attr:og_locale }}">
+
+    <!-- Social preview image -->
+    <meta property="og:image" content="https://apibel.it/favicon_ico/whatsapp-preview.png">
+    <meta property="og:image:secure_url" content="https://apibel.it/favicon_ico/whatsapp-preview.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:image:alt" content="{{ attr:seo.title }}">
+
+    <!-- TWITTER / X CARD -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ attr:seo.title }}">
+    <meta name="twitter:description" content="{{ attr:seo.description }}">
+    <meta name="twitter:image" content="https://apibel.it/favicon_ico/whatsapp-preview.png">
+
+    <!-- FAVICONS -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_ico/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_ico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon_ico/favicon-48x48.png">
+    <link rel="shortcut icon" href="/favicon_ico/favicon.ico">
+
+    <!-- APPLE -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/favicon_ico/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon_ico/apple-touch-icon-152x152.png">
+
+    <!-- ANDROID / CHROME / EDGE -->
+    <link rel="manifest" href="/favicon_ico/site.webmanifest">
+
+    <!-- THEME -->
+    <meta name="theme-color" content="#d18a00">
+
+    <!-- MICROSOFT -->
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon_ico/mstile-150x150.png">
+
+    <!-- FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+
+<body>
+
+    <nav>
+        <a href="#hero" class="nav-logo cursive">Apibel</a>
+
+        <div class="menu-toggle" id="mobile-menu">☰</div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#chi-siamo">{{ text:nav.about }}</a></li>
+            <li><a href="#mieli">{{ text:nav.honey }}</a></li>
+            <li><a href="#territorio">{{ text:nav.territory }}</a></li>
+            <li><a href="#metodo">{{ text:nav.production }}</a></li>
+            <li><a href="#dove-acquistare">{{ text:nav.buy }}</a></li>
+            <li><a href="#contatti">{{ text:nav.contact }}</a></li>
+            <li id="language-choice" class="language-selector">
+
+                <button class="language-button" id="language-button">
+                    <img src="./static/assets/translation-global.svg" alt="" class="language-icon">
+                    <img src="{{ attr:flag_src }}" alt="{{ attr:nav.current_language }}" class="flag-icon">
+                    <span>{{ text:nav.current_language }}</span>
+                    <span class="language-arrow">▾</span>
+                </button>
+
+                <div class="language-menu" id="language-menu">
+
+                    <a href="index.html" {{ raw:active.it }}>
+                        <img src="./static/assets/it.svg" alt="Italiano">
+                        <span>Italiano</span>
+                    </a>
+
+                    <a href="index-en.html" {{ raw:active.en }}>
+                        <img src="./static/assets/uk.svg" alt="English">
+                        <span>English</span>
+                    </a>
+
+                    <a href="index-fr.html" {{ raw:active.fr }}>
+                        <img src="./static/assets/fr.svg" alt="Français">
+                        <span>Français</span>
+                    </a>
+
+                    <a href="index-de.html" {{ raw:active.de }}>
+                        <img src="./static/assets/de.svg" alt="Deutsch">
+                        <span>Deutsch</span>
+                    </a>
+
+                </div>
+
+            </li>
+        </ul>
+    </nav>
+
+    <section id="hero"
+        style="background: url('./static/assets/landing_page.webp') no-repeat center center; background-size: cover; max-width: 100%;">
+        <div class="label-box">
+            <!--div style="font-size: 2.5rem; margin-bottom: 10px;">🇮🇹</div-->
+            <h1 class="hero-title cursive">Apibel</h1>
+            <div class="hero-subtitle">{{ text:hero.headline }}</div>
+            <p style="font-size: 1.2rem; font-style: italic; margin-bottom: 30px;">{{ text:hero.origin }}</p>
+            <a href="#mieli" class="btn">{{ text:hero.cta }}</a>
+        </div>
+    </section>
+
+    <section id="chi-siamo" class="section-center">
+        <h2>{{ text:nav.about }}</h2>
+
+        <div class="about-wrapper">
+
+            <div class="about-image">
+                <img src="./static/assets/apicoltore-apibel.jpg" alt="{{ attr:images.beekeeper }}">
+
+                <div class="about-caption">
+                    {{ text:about.eyebrow }}
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h3 class="cursive">{{ text:about.subtitle }}</h3>
+
+                <p>
+                    {{ text:about.paragraph1 }}
+                </p>
+
+                <p>
+                    {{ text:about.paragraph2 }}
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="mieli">
+        <div class="section-center">
+            <h2>{{ text:honey.heading }}</h2>
+        </div>
+
+        <div class="grid-3">
+
+            <!-- ACACIA -->
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('./static/assets/fiori_accacia.webp') no-repeat center center; background-size: cover;">
+
+                <h3 class="cursive" style="font-size: 2.5rem;">Acacia</h3>
+
+                <img src="./static/assets/1kg%20ACACIA.webp" alt="{{ attr:images.acacia }}"
+                    class="honey-jar-image" loading="lazy">
+
+                <p><strong>1kg / 500gr / 250 gr / 125gr / 60gr</strong></p>
+
+                <p class="descrizione-miele-card" style="margin: 15px 0;">
+                    {{ text:honey.acacia.description }}
+                </p>
+
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">
+                    {{ text:honey.request }}
+                </a>
+            </div>
+
+            <!-- CASTAGNO -->
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('./static/assets/fiori_castagno.webp') no-repeat center center; background-size: cover;">
+
+                <h3 class="cursive" style="font-size: 2.5rem;">{{ text:honey.chestnut.name }}</h3>
+
+                <img src="./static/assets/1kg%20CASTAGNO.webp" alt="{{ attr:images.chestnut }}"
+                    class="honey-jar-image" loading="lazy">
+
+                <p><strong>1kg / 500gr / 250 gr / 125gr / 60gr</strong></p>
+
+                <p class="descrizione-miele-card" style="margin: 15px 0;">
+                    {{ text:honey.chestnut.description }}
+                </p>
+
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">
+                    {{ text:honey.request }}
+                </a>
+            </div>
+
+            <!-- MILLEFIORI -->
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('./static/assets/millefiori.webp') no-repeat center center; background-size: cover;">
+
+                <h3 class="cursive" style="font-size: 2.5rem;">{{ text:honey.wildflower.name }}</h3>
+
+                <img src="./static/assets/1k%20MILLEFIORI.webp" alt="{{ attr:images.wildflower }}"
+                    class="honey-jar-image" loading="lazy">
+
+                <p><strong>1kg / 500gr / 250 gr / 125gr / 60gr</strong></p>
+
+                <p class="descrizione-miele-card" style="margin: 15px 0;">
+                    {{ text:honey.wildflower.description }}
+                </p>
+
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">
+                    {{ text:honey.request }}
+                </a>
+            </div>
+
+            <!-- CASTIGLIO -->
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('./static/assets/castiglio.webp') no-repeat center center; background-size: cover;">
+
+                <h3 class="cursive" style="font-size: 2.5rem;">Castiglio</h3>
+
+                <img src="./static/assets/1kg%20CASTIGLIO.webp" alt="{{ attr:images.castiglio }}"
+                    class="honey-jar-image" loading="lazy">
+
+                <p><strong>1kg / 500gr / 250 gr / 125gr / 60gr</strong></p>
+
+                <p class="descrizione-miele-card" style="margin: 15px 0;">
+                    {{ text:honey.castiglio.description }}
+                </p>
+
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">
+                    {{ text:honey.request }}
+                </a>
+            </div>
+
+            <!-- TIGLIO -->
+            <div class="card label-box"
+                style="background: linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)), url('./static/assets/tiglio.webp') no-repeat center center; background-size: cover;">
+
+                <h3 class="cursive" style="font-size: 2.5rem;">{{ text:honey.linden.name }}</h3>
+
+                <img src="./static/assets/1kg%20TIGLIO.webp" alt="{{ attr:images.linden }}"
+                    class="honey-jar-image" loading="lazy">
+
+                <p><strong>1kg / 500gr / 250 gr / 125gr / 60gr</strong></p>
+
+                <p class="descrizione-miele-card" style="margin: 15px 0;">
+                    {{ text:honey.linden.description }}
+                </p>
+
+                <a href="#contatti" class="btn btn-outline" style="padding: 10px 20px; font-size: 0.9rem;">
+                    {{ text:honey.request }}
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="territorio" class="section-center">
+        <h2>{{ text:nav.territory }}</h2>
+        <h3 class="cursive" style="font-size: 2rem; margin-bottom: 20px;">{{ text:territory.subtitle }}</h3>
+
+        <p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            {{ text:territory.description }}
+        </p>
+
+        <div class="territorio-gallery">
+
+            <div class="territorio-card">
+                <img src="./static/assets/invorio.jpg" alt="{{ attr:images.invorio }}">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Invorio</h3>
+                    <p>{{ text:territory.invorio.description }}</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/fontaneto-web.jpg" alt="Fontaneto d'Agogna">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Fontaneto d'Agogna</h3>
+                    <p>{{ text:territory.fontaneto.description }}</p>
+                </div>
+            </div>
+
+            <div class="territorio-card">
+                <img src="./static/assets/montecrestese.jpg" alt="Montecrestese">
+                <div class="territorio-overlay">
+                    <h3 class="cursive">Montecrestese</h3>
+                    <p>{{ text:territory.montecrestese.description }}</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="metodo">
+        <div class="label-box" style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
+            <div style="flex: 1; min-width: 300px;">
+                <h2 style="text-align: left; border: none; margin-bottom: 10px;">{{ text:production.heading }}</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                    {{ text:production.description }}
+                </p>
+                <ul style="list-style: none;">
+                    <li>{{ text:production.feature1 }}</li>
+                    <li>{{ text:production.feature2 }}</li>
+                    <li>{{ text:production.feature3 }}</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="perche-noi">
+        <div class="section-center">
+            <h2>{{ text:benefits.heading }}</h2>
+        </div>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-icon"><img src="./static/assets/it.svg" alt="Italiano" class="flag-icon"
+                        style="height: 2.4rem; width: 3.2rem;"></div>
+                <h3>{{ text:benefits.italian.title }}</h3>
+                <p>{{ text:benefits.italian.description }}
+                </p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👐</div>
+                <h3>{{ text:benefits.artisanal.title }}</h3>
+                <p>{{ text:benefits.artisanal.description }}</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🌿</div>
+                <h3>{{ text:benefits.natural.title }}</h3>
+                <p>{{ text:benefits.natural.description }}
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dove-acquistare" class="section-center">
+        <h2>{{ text:buy.heading }}</h2>
+        <p style="max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem;">
+            {{ text:buy.description }}
+        </p>
+        <a href="#contatti" class="btn btn-outline">{{ text:buy.cta }}</a>
+    </section>
+
+
+    <section id="recensioni">
+        <div class="section-center">
+            <h2>{{ text:reviews.heading }}</h2>
+        </div>
+
+        <div class="reviews-carousel">
+            <button class="reviews-arrow" id="reviews-prev" aria-label="{{ attr:reviews.previous }}">
+                &#10094;
+            </button>
+
+            <div class="reviews-track" id="google-reviews">
+                <p>{{ text:reviews.loading }}</p>
+            </div>
+
+            <button class="reviews-arrow" id="reviews-next" aria-label="{{ attr:reviews.next }}">
+                &#10095;
+            </button>
+        </div>
+
+        <div class="reviews-footer">
+            <span>{{ text:reviews.credit }}</span>
+            <a id="reviews-google-link" href="https://www.google.com/maps/search/?api=1&query=Apibel%20Invorio"
+                target="_blank" rel="noopener noreferrer">
+                <img src="https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png"
+                    alt="Google">
+            </a>
+            <div id="reviews-attributions"></div>
+        </div>
+    </section>
+
+
+    <footer id="contatti">
+        <h2 style="color: var(--bg-parchment);">{{ text:footer.headline }}</h2>
+        <p style="margin-bottom: 40px; font-size: 1.2rem;">{{ text:footer.description }}
+        </p>
+
+        <div class="contact-info">
+            <h3 class="cursive" style="font-size: 2.5rem; margin-bottom: 10px;">Apibel</h3>
+            <p>{{ text:footer.byline }}</p>
+            <p>📍 Via Monte Rosa 118b, 28045 Invorio (NO)</p>
+            <p>✉️ info@apibel.it </p>
+            <p>
+                <a href="https://wa.me/393351890260" target="_blank" rel="noopener noreferrer"
+                    style="text-decoration: none; color: inherit;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#25D366" viewBox="0 0 16 16"
+                        style="vertical-align: middle; margin-right: 6px; margin-bottom: 2px;">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                    </svg>
+                    +39 335 189 0260
+                </a>
+                <br>
+                <span> ☎️ +39 0322 175 0710 </span>
+            </p>
+            <p style="margin-top: 20px; font-size: 1rem;">{{ text:footer.vat }}</p>
+        </div>
+
+        <div style="margin-top: 40px;">
+            <a href="mailto:info@apibel.it" class="btn"
+                style="background-color: var(--bg-parchment); color: var(--text-dark-green); border-color: var(--bg-parchment);">{{ text:footer.cta }}</a>
+        </div>
+
+        <!--div class="recycling-info">
+            <div>VASO: GL 70 (VETRO)</div>
+            <div>CAPSULA: FE 40 (ACCIAIO)</div>
+            <div>♻️ VERIFICA LE DISPOSIZIONI DEL TUO COMUNE</div>
+        </div-->
+    </footer>
+    <script src="./static/google-reviews.js"></script>
+    <script src="./static/scripts.js"></script>
+
+</body>
+
+</html>
